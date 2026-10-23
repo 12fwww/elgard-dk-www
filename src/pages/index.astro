@@ -1,0 +1,220 @@
+---
+import { Picture } from 'astro:assets';
+import Layout from '../components/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SeoHead from '../components/SeoHead.astro';
+import { org } from '../data/site.ts';
+import { services } from '../data/site.ts';
+import { branches } from '../data/site.ts';
+import { faq } from '../data/site.ts';
+import { pickerTasks } from '../data/site.ts';
+import { foundCredit } from '../data/site.ts';
+import liselotte from '../assets/original/liselotte.jpg';
+import logo from '../assets/original/logo.png';
+import birkerod from '../assets/original/birkerod.jpg';
+const B = import.meta.env.BASE_URL;
+const localBusiness = {
+  '@context': 'https://schema.org',
+  '@type': 'AccountingService',
+  name: org.name,
+  url: 'https://elgard.dk/',
+  logo: logo.src,
+  telephone: '+45 2684 9809',
+  email: org.email,
+  priceRange: '€€',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'RevisorHuset, Blokken 90',
+    postalCode: '3460',
+    addressLocality: 'Birkerød',
+    addressCountry: 'DK',
+  },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday'], opens: '09:00', closes: '16:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday', opens: '09:00', closes: '15:00' },
+  ],
+};
+const title = 'Mere tid til forretning og familie | Elgård Regnskab';
+const description = 'Bogholderi, regnskab, moms og skat for selvstændige i Birkerød og omegn. Frister, afregninger og årsregnskab klaret — så tiden går til forretning og familie. Ring 2684 9809.';
+const sumTotal = pickerTasks.reduce((s, t) => s + t.est, 0);
+---
+
+<Layout>
+  <Fragment slot="head">
+    <SeoHead title={title} description={description} path="/" image={liselotte} jsonld={[localBusiness]} />
+  </Fragment>
+
+  <Header />
+
+  <main>
+    <section class="hero wrap" aria-label="Forside">
+      <h1 class="hero-name" data-reveal>Velkommen hos Elgård Regnskab</h1>
+      <p class="hero-sentence" data-reveal>Mere tid til forretning og familie</p>
+      <div class="hero-strip" data-reveal>
+        <Picture src={liselotte} formats={['avif', 'webp']} widths={[480, 960, 1440, 2048]} sizes="(min-width: 48em) 1400px, 94vw" alt="Liselotte Elgård Nielsen, revisor og indehaver af Elgård Regnskab, på kontoret i Birkerød" loading="eager" />
+      </div>
+      <p class="hero-support" data-reveal>
+        Vi klarer bogføring, frister, moms og regnskab — så du behøver bare at være
+        selvstændig.
+      </p>
+      <div class="hero-cta" data-reveal>
+        <a class="button" href={org.phoneHref}>Ring {org.phone}</a>
+      </div>
+    </section>
+
+    <section class="picker section wrap" aria-labelledby="picker-h">
+      <div class="grid">
+        <div style="grid-column: 1 / -1;">
+          <h2 id="picker-h" class="picker-head" data-reveal>Hvad overdrer vi?</h2>
+          <p class="picker-intro" data-reveal>
+            Vælg det, du gider mindst at bruge tid på. Vi estimerer, hvor meget det koster
+            dig om ugen.
+          </p>
+          <div class="chips" id="picker-chips" data-reveal>
+            {pickerTasks.map((t) => (
+              <button class="chip" type="button" data-label={t.label} aria-pressed="false">
+                {t.label} <span class="est">≈ {t.est} t/u</span>
+              </button>
+            ))}
+          </div>
+          <p class="sumline" id="picker-sum" role="status" data-reveal>
+            Vælg én eller flere opgaver, og se, hvor meget tid du får tilbage.
+          </p>
+          <p class="picker-fallback" data-reveal>
+            Typiske estimater for små selvstændige virksomheder: bogføring ca. 4
+            timer/uge, moms og selvangivelse ca. 2, lønadministration ca. 3, frister og
+            korrespondance ca. 2 samt årsregnskab ca. 3 timer fordelt over året. Alt
+            sammen er det ca. {sumTotal} timer om ugen, du kan bruge på forretning og
+            familie.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" aria-labelledby="svc-h">
+      <h2 id="svc-h" class="head" data-reveal>Alt det, dit regnskab rører</h2>
+      <p class="features-note" data-reveal>
+        <a class="link-plain" href={`${B}/regnskabsservice/bogholderi/`}>Bogholderi</a>,
+        <a class="link-plain" href={`${B}/regnskabsservice/`}>regnskab</a>,
+        <a class="link-plain" href={`${B}/moms-skat/`}>moms, told og skat</a>,
+        <a class="link-plain" href={`${B}/regnskabsservice/`}>fakturering</a> og
+        <a class="link-plain" href={`${B}/regnskabsservice/`}>lønadministration</a> —
+        samlet ét sted. Revision og påtegning klarer vi i samarbejde med
+        <a class="link-plain" href={`${B}/regnskabsservice/revision/`}>statsautoriseret revisor
+        Claus Carlsen</a>.
+      </p>
+      <div class="sublist" data-reveal>
+        {services.map((s) => (
+          <li>
+            <a href={s.href}>{s.name}</a> — {s.text}
+          </li>
+        ))}
+      </div>
+    </section>
+
+    <section class="proof section wrap" aria-labelledby="proof-h">
+      <h2 id="proof-h" class="head" data-reveal>Vi kender regnskabet fra</h2>
+      <p class="proof-text" data-reveal>
+        {branches.map((b, i) => <span class={i === 0 ? 'word lit on' : 'word lit'}>{b}</span>)}
+        <span class="word">.</span>
+      </p>
+      <figure class="street-figure" data-reveal>
+        <Picture src={birkerod} formats={['avif', 'webp']} widths={[480, 960, 1440, 1920]} sizes="(min-width: 48em) 896px, 94vw" alt="Birkerød Hovedgade" loading="lazy" />
+        <figcaption>
+          Birkerød Hovedgade — {foundCredit.license}, via {foundCredit.via}.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section wrap" aria-labelledby="om-h">
+      <h2 id="om-h" class="head" data-reveal>Liselotte Elgård Nielsen</h2>
+      <div data-reveal>
+        <figure class="portrait-float-wrap" style="margin: 0;">
+          <span class="portrait-float shutter drift" data-reveal>
+            <Picture src={liselotte} formats={['avif', 'webp']} widths={[340, 512, 767]} sizes="(min-width: 48em) 184px, 44vw" alt="Liselotte Elgård Nielsen i kontoret i Birkerød" loading="lazy" />
+          </span>
+        </figure>
+        <p class="about-bio">
+          Uddannet revisor med mange års erfaring for store, mellemstore og små virksomheder.
+          Hun sætter en ære i at tale, så enhver kan forstå, hvad sagen handler om — og
+          guider mindre og mellemstore virksomheder igennem junglen af papirer fra det
+          offentlige, så frister vedrørende skat og moms overholdes.
+        </p>
+        <dl class="about-facts" style="margin-top: 2rem;">
+          <div><dt>Adresse</dt><dd>{org.street}, {org.city}</dd></div>
+          <div><dt>CVR</dt><dd>{org.cvr}</dd></div>
+          <div><dt>Åbent</dt><dd>{org.hours}</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section wrap" aria-labelledby="faq-h">
+      <h2 id="faq-h" class="faq-q" data-reveal>Hvad kunderne spørger til</h2>
+      <div class="faq-list" data-reveal>
+        {faq.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p class="faq-a">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="close">
+      <div class="wrap" style="display: flex; flex-direction: column; flex: 1;">
+        <h2 data-reveal>Ring i dag. Resten klarer vi.</h2>
+        <div class="close-row" data-reveal>
+          <p>
+            {org.phoneHours}. Eller skriv: <a class="link-plain" href={org.emailHref}>{org.email}</a>.
+          </p>
+          <a class="button" href={org.phoneHref}>Ring {org.phone}</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+
+  <script>
+    const chips = Array.from(document.querySelectorAll('.chip'));
+    const sumEl = document.getElementById('picker-sum');
+    const ests = new Map(chips.map((c) => [c.dataset.label, 0]));
+    for (const c of chips) {
+      const est = c.querySelector('.est');
+      if (est) ests.set(c.dataset.label, Number((est.textContent || '').replace(/[^\d]/g, '')) || 0);
+    }
+    const selected = new Set();
+    const render = () => {
+      const total = Array.from(selected).reduce((s, l) => s + (ests.get(l) || 0), 0);
+      chips.forEach((c) => c.setAttribute('aria-pressed', String(selected.has(c.dataset.label))));
+      if (sumEl) {
+        if (total > 0) {
+          sumEl.innerHTML = 'Det svarer til ca. <strong>' + total + ' timer om ugen</strong>, du får tilbage — til din forretning og din familie.';
+        } else {
+          sumEl.textContent = 'Vælg én eller flere opgaver, og se, hvor meget tid du får tilbage.';
+        }
+      }
+    };
+    for (const c of chips) {
+      c.addEventListener('click', () => {
+        selected.has(c.dataset.label) ? selected.delete(c.dataset.label) : selected.add(c.dataset.label);
+        render();
+      });
+    }
+
+    const lits = Array.from(document.querySelectorAll('.proof-text .word.lit'));
+    if (lits.length) {
+      let i = 0;
+      const tick = () => {
+        lits.forEach((el, j) => el.classList.toggle('on', j === i));
+        i = (i + 1) % lits.length;
+      };
+      tick();
+      setInterval(tick, 2000);
+    }
+  </script>
+  <style>
+    .proof-text .lit.on { color: var(--ink); }
+  </style>
+</Layout>

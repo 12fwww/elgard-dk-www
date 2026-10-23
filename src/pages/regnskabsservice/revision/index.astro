@@ -1,0 +1,55 @@
+---
+import Layout from '../../../components/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import SeoHead from '../../../components/SeoHead.astro';
+import { org } from '../../../data/site.ts';
+const B = import.meta.env.BASE_URL;
+const title = 'Revision | Elgård Regnskab';
+const description = 'Revisionspåtegning af dit selskabs regnskaber i samarbejde med statsautoriseret revisor Claus Carlsen — bogføring, administration og revision sammensat til jeres behov.';
+const path = '/regnskabsservice/revision/';
+const crumbObj = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Forside', item: 'https://elgard.dk/' },
+    { '@type': 'ListItem', position: 2, name: 'Regnskabsservice', item: 'https://elgard.dk/regnskabsservice/' },
+    { '@type': 'ListItem', position: 3, name: 'Revision', item: `https://elgard.dk${path}` },
+  ],
+};
+---
+
+<Layout>
+  <Fragment slot="head">
+    <SeoHead title={title} description={description} path={path} jsonld={[crumbObj]} />
+  </Fragment>
+  <Header />
+  <main>
+    <section class="page-head wrap">
+      <h1>Revision</h1>
+      <p class="lead">
+        Har du behov for — eller direkte krav om — revisionspåtegning af dit selskabs
+        regnskaber?
+      </p>
+    </section>
+    <section class="section wrap" style="padding-top: 0;">
+      <p style="max-width: 58ch;">
+        Elgård Regnskab samarbejder med statsautoriseret revisor
+        <a class="link-plain" href="http://rygecarlsen.dk/" target="_blank" rel="noopener">Claus Carlsen</a>.
+      </p>
+      <p style="max-width: 58ch;">
+        Samarbejdet giver mulighed for, at vi kan sammensætte opgaver omkring bogføring,
+        administration og revision på den måde, der passer bedst til din virksomheds
+        behov — fra den løbende bogføring til selve påtegningen.
+      </p>
+      <div class="contact-card" style="margin-top: 3.5rem;">
+        <dl>
+          <div><dt>Kontakt</dt><dd><a class="link-plain" href={org.phoneHref}>Direkte {org.phone}</a> · <a class="link-plain" href={org.officePhoneHref}>Kontor {org.officePhone}</a> · <a class="link-plain" href={org.emailHref}>{org.email}</a></dd></div>
+          <div><dt>Kontor</dt><dd>{org.street}, {org.city} · CVR {org.cvr}</dd></div>
+          <div><dt>Åbent</dt><dd>{org.hours}. {org.phoneHours}.</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,60 @@
+---
+import Layout from '../../components/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SeoHead from '../../components/SeoHead.astro';
+import { org } from '../../data/site.ts';
+import { crumb } from '../../data/site.ts';
+const B = import.meta.env.BASE_URL;
+const title = 'Regnskabsservice | Elgård Regnskab';
+const description = 'Hele pakken eller kun årsregnskabet: bogholderi, momsafregning, fakturering, lønadministration, revision og fremlæggelse af regnskab — sammensat til jeres behov.';
+const path = '/regnskabsservice/';
+const items = [
+  { name: 'Bogholderi', href: `${B}/regnskabsservice/bogholderi/`, text: 'Opsætning i regnskabsprogram, indtastning af bilag, kørselsregnskab og klargøring til revision — afleverer du bilagene, eller registrerer du selv?' },
+  { name: 'Fremlæggelse af regnskab', href: `${B}/regnskabsservice/fremlaeggelse-af-regnskab/`, text: 'Personligt fremmøde ved generalforsamling eller bestyrelse, når års- eller kvartalsregnskabet skal præsenteres mundtligt.' },
+  { name: 'Revision', href: `${B}/regnskabsservice/revision/`, text: 'Revisionspåtegning i samarbejde med statsautoriseret revisor Claus Carlsen, så bogføring, administration og revision passer sammen.' },
+  { name: 'Moms, told og skat', href: `${B}/moms-skat/`, text: 'Regler og frister holdes for dig, så afregning sker til tiden — uden renter og gebyrer. Også selvangivelsen.' },
+  { name: 'Fakturering', href: `${B}/regnskabsservice/`, text: 'Fakturaer oprettet og sendt, så omsætningen lander i regnskabet i tide.' },
+  { name: 'Lønadministration', href: `${B}/regnskabsservice/`, text: 'Lønninger beregnet, afregnet og indberettet — inklusive lønsumsafgift.' },
+];
+---
+
+<Layout>
+  <Fragment slot="head">
+    <SeoHead title={title} description={description} path={path} jsonld={[crumb('Regnskabsservice', path)]} />
+  </Fragment>
+  <Header />
+  <main>
+    <section class="page-head wrap">
+      <h1>Regnskabsservice</h1>
+      <p class="lead">
+        Vores regnskabsservice kan indeholde lige det, din virksomhed har behov for. Vi
+        kan tilbyde &bdquo;hele pakken&rdquo;, hvor vi klarer det hele — bogholderi,
+        lønadministration, momsafregning, fakturering og mere. Men vi har også kunder,
+        der selv varetager alt dette og kun benytter os i forbindelse med
+        årsregnskaber.
+      </p>
+    </section>
+    <section class="section wrap" style="padding-top: 0;">
+      <ul class="sublist">
+        {items.map((s) => (
+          <li>
+            <a href={s.href}>{s.name}</a> — {s.text}
+          </li>
+        ))}
+      </ul>
+      <p style="margin-top: 2.5rem; max-width: 58ch;" class="muted">
+        Vi udfører afregning af virksomheder både med og uden moms, difference moms og
+        delvis momsregistrerede samt afregning af lønsumsafgift.
+      </p>
+      <div class="contact-card" style="margin-top: 3.5rem;">
+        <dl>
+          <div><dt>Kontakt</dt><dd><a class="link-plain" href={org.phoneHref}>Direkte {org.phone}</a> · <a class="link-plain" href={org.officePhoneHref}>Kontor {org.officePhone}</a> · <a class="link-plain" href={org.emailHref}>{org.email}</a></dd></div>
+          <div><dt>Kontor</dt><dd>{org.street}, {org.city} · CVR {org.cvr}</dd></div>
+          <div><dt>Åbent</dt><dd>{org.hours}. {org.phoneHours}.</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

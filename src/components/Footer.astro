@@ -1,0 +1,33 @@
+---
+import { nav } from '../data/site.ts';
+import { org } from '../data/site.ts';
+import { foundCredit } from '../data/site.ts';
+const B = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <img src={B + "/assets/logo.png"} alt="Elgård Regnskab" width="1177" height="420" class="logo" />
+      <p>
+        {org.street} · {org.city} · {org.cvr}.<br />
+        {org.hours} — {org.phoneHours}.
+      </p>
+    </div>
+    <a class="footer-phone" href={org.phoneHref}>
+      <span class="sr-only">Ring til Elgård Regnskab på </span>{org.phone}
+    </a>
+    <div class="footer-meta">
+      <nav aria-label="Sidemeny">
+        {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+        <a href={`${B}/moms-skat/`}>Moms & skat</a>
+        <a href={`${B}/om-os/`}>Om os</a>
+      </nav>
+      <p>
+        Billedet: <a class="link-plain" href={foundCredit.page}>{foundCredit.title}</a> —
+        {foundCredit.license}, via {foundCredit.via}.
+      </p>
+      <p>Birkerød · {new Date().getFullYear()}</p>
+    </div>
+  </div>
+</footer>

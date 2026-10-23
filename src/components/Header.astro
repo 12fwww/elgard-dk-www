@@ -1,0 +1,15 @@
+---
+import { nav } from '../data/site.ts';
+import { org } from '../data/site.ts';
+const B = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<header class="site-head wrap">
+  <a href={`${B}/`} class="brand" aria-label="Elgård Regnskab — forside">
+    <img src={B + "/assets/logo.png"} alt="" width="1177" height="420" class="logo" />
+  </a>
+  <nav aria-label="Hovedmenu">
+    {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+  </nav>
+  <a class="link-plain" href={org.phoneHref}>Tel {org.phone}</a>
+</header>

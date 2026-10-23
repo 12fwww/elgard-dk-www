@@ -1,0 +1,79 @@
+---
+import Layout from '../../components/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SeoHead from '../../components/SeoHead.astro';
+import { org } from '../../data/site.ts';
+import { crumb } from '../../data/site.ts';
+const B = import.meta.env.BASE_URL;
+const title = 'Moms & skat | Elgård Regnskab';
+const description = 'Vi holder styr på momsregler og frister for dig, så afregning sker til tiden — og hjælper med selvangivelsen. Også i juni måned.';
+const path = '/moms-skat/';
+const faqObj = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Hjælper I med selvangivelsen?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Ja. Driver du en enkeltmandsvirksomhed eller et personligt ejet selskab, hjælper vi med selvangivelsen, så du kan sove godt om natten. Også i juni måned.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Hvad sker der, hvis en frist overskrides?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Det skal det ikke. Vi holder styr på regler og frister og sikrer, at moms, told og skat afregnes til tiden, så du undgår renter og gebyrer.',
+      },
+    },
+  ],
+};
+---
+
+<Layout>
+  <Fragment slot="head">
+    <SeoHead title={title} description={description} path={path} jsonld={[crumb('Moms & skat', path), faqObj]} />
+  </Fragment>
+  <Header />
+  <main>
+    <section class="page-head wrap">
+      <h1>Moms & skat</h1>
+      <p class="lead">Reglerne ændrer sig. Vi holder styr på dem for dig.</p>
+    </section>
+    <section class="section wrap" style="padding-top: 0;">
+      <p style="max-width: 58ch;">
+        Moms og skatteregler ændrer sig løbende. At holde styr på regler og frister kan
+        derfor være en udfordring for mange virksomheder — dette gælder ikke mindst de
+        små virksomheder, hvor ejeren også skal varetage en del af produktionen, salget og
+        markedsføringen.
+      </p>
+      <p style="max-width: 58ch;">
+        Vi holder styr på regler og frister for dig — og sikrer, at du altid får afregnet
+        moms, told og skat til tiden. Herved undgår du at skulle betale renter og gebyrer
+        som følge af overskredne frister. Og samtidig slipper du for at bekymre dig om
+        det — og kan i stedet bruge din tid på at skabe fremdrift i din virksomhed.
+      </p>
+      <h2 class="head" style="margin-top: 3.5rem; font-size: var(--step-lead);">Få hjælp til din selvangivelse</h2>
+      <p style="max-width: 58ch;">
+        Driver du en enkeltmandsvirksomhed eller et personligt ejet selskab, hænger dit
+        personlige skatteregnskab sammen med virksomhedens. Det kan godt give søvnløse
+        nætter for mange — især op til fristen for selvangivelsen.
+      </p>
+      <p style="max-width: 58ch;">
+        Lad os hjælpe dig med selvangivelsen — og sov godt om natten. <strong>Også i juni
+        måned.</strong>
+      </p>
+      <div class="contact-card" style="margin-top: 3.5rem;">
+        <dl>
+          <div><dt>Kontakt</dt><dd><a class="link-plain" href={org.phoneHref}>Direkte {org.phone}</a> · <a class="link-plain" href={org.officePhoneHref}>Kontor {org.officePhone}</a> · <a class="link-plain" href={org.emailHref}>{org.email}</a></dd></div>
+          <div><dt>Kontor</dt><dd>{org.street}, {org.city} · CVR {org.cvr}</dd></div>
+          <div><dt>Åbent</dt><dd>{org.hours}. {org.phoneHours}.</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,96 @@
+---
+import Layout from '../../components/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SeoHead from '../../components/SeoHead.astro';
+import { org } from '../../data/site.ts';
+import { crumb } from '../../data/site.ts';
+const B = import.meta.env.BASE_URL;
+const title = 'Rådgivning og kurser | Elgård Regnskab';
+const description = 'Rådgivning der passer til din situation: opstart, pension, klargøring til revision — og kurser for iværksættere med revisor Liselotte Elgård Nielsen.';
+const path = '/raadgivning-og-kurser/';
+const faqObj = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Hvilken pension rådgiver I i?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Vi rådgiver om medarbejderpension — pension, der skal udbetales til medarbejdere med krav herpå, fx fastsat gennem overenskomst — og om pensionsordninger for selvstændige.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Holder I kurser?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Ja. Med sin store viden og solide praktiske baggrund er Liselotte Elgård Nielsen en efterspurgt oplægsholder — ikke mindst i forbindelse med møder og kurser for iværksættere.',
+      },
+    },
+  ],
+};
+---
+
+<Layout>
+  <Fragment slot="head">
+    <SeoHead title={title} description={description} path={path} jsonld={[crumb('Rådgivning og kurser', path), faqObj]} />
+  </Fragment>
+  <Header />
+  <main>
+    <section class="page-head wrap">
+      <h1>Rådgivning og kurser</h1>
+      <p class="lead">Rådgivning, der passer til din situation — og som kan forstås.</p>
+    </section>
+    <section class="section wrap" style="padding-top: 0;">
+      <p style="max-width: 58ch;">
+        Liselotte Elgård Nielsen er uddannet revisor og har mange års erfaring med både
+        regnskaber, revision og rådgivning. Hendes mangeårige virke har givet hende en
+        solid indsigt i forholdene for både større, mindre og små virksomheder. Samtidig
+        sætter hun en ære i at tale, så enhver kan forstå, hvad sagen handler om.
+      </p>
+      <p style="max-width: 58ch;">
+        Liselotte guider mindre og mellemstore virksomheder igennem junglen af papirer fra
+        det offentlige — og skaber overblik, der sikrer, at der kommer styr på bl.a.
+        overholdelse af diverse frister vedrørende skat og moms.
+      </p>
+      <h2 class="head" style="margin-top: 3.5rem; font-size: var(--step-lead);">Rådgivning, der passer til din situation</h2>
+      <p style="max-width: 58ch;">
+        Liselotte Elgård Nielsen hjælper opstartsvirksomheder i gang med indretning af
+        bogholderiet, planlægning af momsafregningen samt forskudsopgørelsen og næste års
+        selvangivelse.
+      </p>
+      <p style="max-width: 58ch;">
+        De større virksomheder med flere ansatte får blandt andet rådgivning i forbindelse
+        med tilrettelæggelse af bogholderiet og klargøring af regnskaber til revision.
+      </p>
+      <h2 class="head" style="margin-top: 3.5rem; font-size: var(--step-lead);">Rådgivning om pension</h2>
+      <p style="max-width: 58ch;">Vores rådgivning om pension omfatter:</p>
+      <ul class="sublist">
+        <li>
+          <strong>Medarbejderpension</strong> — pension, der skal udbetales til
+          medarbejdere med krav herpå (fx krav fastsat gennem overenskomst).
+        </li>
+        <li>
+          <strong>Pensionsordninger for selvstændige</strong> — ordninger, der passer til
+          en selvstændig virksomheds forhold.
+        </li>
+      </ul>
+      <h2 class="head" style="margin-top: 3.5rem; font-size: var(--step-lead);">Kurser for iværksættere</h2>
+      <p style="max-width: 58ch;">
+        Med sin store viden og solide praktiske baggrund er Liselotte Elgård Nielsen en
+        efterspurgt oplægsholder — ikke mindst i forbindelse med møder og kurser for
+        iværksættere.
+      </p>
+      <div class="contact-card" style="margin-top: 3.5rem;">
+        <dl>
+          <div><dt>Kontakt</dt><dd><a class="link-plain" href={org.phoneHref}>Direkte {org.phone}</a> · <a class="link-plain" href={org.officePhoneHref}>Kontor {org.officePhone}</a> · <a class="link-plain" href={org.emailHref}>{org.email}</a></dd></div>
+          <div><dt>Kontor</dt><dd>{org.street}, {org.city} · CVR {org.cvr}</dd></div>
+          <div><dt>Åbent</dt><dd>{org.hours}. {org.phoneHours}.</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,20 @@
+---
+import { org } from '../data/site.ts';
+const B = import.meta.env.BASE_URL.replace(/\/$/, "");
+const links = [
+  { label: 'Regnskabsservice', href: `${B}/regnskabsservice/` },
+  { label: 'Moms & skat', href: `${B}/moms-skat/` },
+  { label: 'Rådgivning', href: `${B}/raadgivning-og-kurser/` },
+  { label: 'Om os', href: `${B}/om-os/` },
+];
+---
+
+<header class="site-head wrap">
+  <a href={`${B}/`} class="brand" aria-label="Elgård Regnskab — forside">
+    <img src={B + "/assets/logo.png"} alt="" width="1177" height="420" class="logo" />
+  </a>
+  <nav aria-label="Hovedmenu5">
+    {links.map((n) => <a href={n.href}>{n.label}</a>)}
+  </nav>
+  <a class="link-plain" href={org.phoneHref}>Tel {org.phone}</a>
+</header>

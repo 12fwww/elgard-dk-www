@@ -1,0 +1,58 @@
+{
+  "lang": "da",
+  "generated": "placeholder — data filled after measurements",
+  "original": "https://elgard.dk",
+  "preview": "https://12fwww.github.io/elgard-dk-www/",
+  "platform": {
+    "cms": "WordPress",
+    "generators": [
+      "Divi v.4.19.1",
+      "WordPress 6.1.15"
+    ],
+    "host": "Simply.com",
+    "tls": "Let's Encrypt, expires 2027-01-20"
+  },
+  "core": {
+    "version": "6.1.15",
+    "latest": "7.1.3",
+    "outdated": true
+  },
+  "components": [],
+  "security_headers": {},
+  "exposures": [
+    "user_enumeration",
+    "login_page",
+    "readme"
+  ],
+  "third_party": [
+    "Google Fonts (external)"
+  ],
+  "summary": {
+    "components": 0,
+    "outdated": 0,
+    "closed": 0,
+    "known_vulnerabilities": 0,
+    "unauthenticated": 0,
+    "missing_security_headers": []
+  },
+  "checks": [],
+  "pages": [
+    {
+      "path": "/",
+      "title": "Forside",
+      "score": 55,
+      "checks": {}
+    }
+  ],
+  "lighthouse": {
+    "old": null,
+    "new": null
+  },
+  "screenshots": {
+    "old_desktop": "old-desktop.jpg",
+    "old_mobile": "old-mobile.jpg",
+    "new_desktop": "new-desktop.jpg",
+    "new_mobile": "new-mobile.jpg"
+  },
+  "pricing": null
+}

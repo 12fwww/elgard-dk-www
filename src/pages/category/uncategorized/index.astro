@@ -1,0 +1,43 @@
+---
+import Layout from '../../../components/Layout.astro';
+import Header5 from '../../../components/Header5.astro';
+import Footer from '../../../components/Footer.astro';
+import SeoHead from '../../../components/SeoHead.astro';
+import { org } from '../../../data/site.ts';
+import { crumb } from '../../../data/site.ts';
+const B = import.meta.env.BASE_URL;
+const title = 'Indlæg | Elgård Regnskab';
+const description = 'Vi skriver løbende her om skat, moms og frister. Indtil da: ring på 2684 9809 og spørg.';
+const path = '/category/uncategorized/';
+---
+
+<Layout>
+  <Fragment slot="head">
+    <SeoHead title={title} description={description} path={path} jsonld={[crumb('Indlæg', path)]} />
+  </Fragment>
+  <Header5 />
+  <main>
+    <section class="page-head wrap">
+      <h1>Indlæg</h1>
+      <p class="lead">Nyheder om skat, moms og frister — lige så snart, der er noget, der er værd at vide.</p>
+    </section>
+    <section class="section wrap" style="padding-top: 0;">
+      <p style="max-width: 58ch;">
+        Her samler vi indlæg, når der sker noget i skatteministeriet eller momsreglerne,
+        som det er værd at vide noget om — før det rammer fristen.
+      </p>
+      <p style="max-width: 58ch;">
+        Indtil da: ring på <a class="link-plain" href={org.phoneHref}>{org.phone}</a> og
+        spørg. Vi svarer alle hverdage 9–16.
+      </p>
+      <div class="contact-card" style="margin-top: 3.5rem;">
+        <dl>
+          <div><dt>Kontakt</dt><dd><a class="link-plain" href={org.phoneHref}>Direkte {org.phone}</a> · <a class="link-plain" href={org.officePhoneHref}>Kontor {org.officePhone}</a> · <a class="link-plain" href={org.emailHref}>{org.email}</a></dd></div>
+          <div><dt>Kontor</dt><dd>{org.street}, {org.city} · CVR {org.cvr}</dd></div>
+          <div><dt>Åbent</dt><dd>{org.hours}. {org.phoneHours}.</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
