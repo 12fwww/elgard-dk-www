@@ -14,7 +14,9 @@ const production = (import.meta.env.PUBLIC_PRODUCTION_URL || Astro.site?.origin 
 const preview = import.meta.env.PUBLIC_PREVIEW !== '0';
 const canonical = production + path;
 const og = image ? await getImage({ src: image, width: 1200, format: 'jpg' }) : null;
-const ogUrl = og ? new URL(og.src, Astro.site).href : undefined;
+const ogUrl = og
+  ? new URL(og.src.startsWith('/') ? og.src : `/${og.src}`, import.meta.env.SITE || Astro.site).href
+  : undefined;
 ---
 
 <title>{title}</title>
