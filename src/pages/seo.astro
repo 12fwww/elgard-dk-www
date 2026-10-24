@@ -227,7 +227,7 @@ const total = (key: 'old' | 'new') => (price?.rows || []).reduce((a: number, r: 
         </>)}
       </div>
       <div class="panel">
-        <h2>{t.staticH}</h2>
+        <h2>{t.staticH}</h3>
         <ul class="ticks">{t.staticList.map((x) => <li><span class="good" taste-skill-ignore>✓</span> {x}</li>)}</ul>
       </div>
     </section>
@@ -266,7 +266,7 @@ const total = (key: 'old' | 'new') => (price?.rows || []).reduce((a: number, r: 
 
     {lh.old && lh.new && (
       <section class="wrap">
-        <h2>{t.lhH}</h2>
+        <h2>{t.lhH}</h3>
         <div class="table-scroll">
           <table>
             <thead><tr><th></th><th>{t.now}</th><th>{t.new}</th></tr></thead>
