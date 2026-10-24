@@ -118,13 +118,13 @@ const sumTotal = pickerTasks.reduce((s, t) => s + t.est, 0);
         <a class="link-plain" href={`${B}/regnskabsservice/revision/`}>statsautoriseret revisor
         Claus Carlsen</a>.
       </p>
-      <div class="sublist" data-reveal>
+      <ul class="sublist" data-reveal>
         {services.map((s) => (
           <li>
             <a href={s.href}>{s.name}</a> — {s.text}
           </li>
         ))}
-      </div>
+      </ul>
     </section>
 
     <section class="proof section wrap" aria-labelledby="proof-h">
