@@ -1,11 +1,11 @@
 {
   "lang": "da",
-  "generated": "2026-10-23",
+  "generated": "2026-10-24",
   "original": "https://elgard.dk",
-  "preview": "https://12fwww.github.io/elgard-dk-www/",
+  "preview": "https://12fwww.github.io/elgard-dk-www",
   "summary": {
     "seo_old": 70,
-    "seo_new": 83,
+    "seo_new": 100,
     "vulns_old": 10,
     "vulns_unauth_old": 0,
     "outdated_old": 1,
@@ -162,14 +162,14 @@
       "key": "title",
       "label": "Sidetitel",
       "old": 67,
-      "new": 75,
+      "new": 100,
       "preview": false
     },
     {
       "key": "meta_description",
       "label": "Metabeskrivelse",
       "old": 0,
-      "new": 81,
+      "new": 100,
       "preview": false
     },
     {
@@ -183,21 +183,21 @@
       "key": "headings",
       "label": "Overskriftsstruktur",
       "old": 69,
-      "new": 75,
+      "new": 100,
       "preview": false
     },
     {
       "key": "word_count",
       "label": "Mængde tekst",
       "old": 56,
-      "new": 61,
+      "new": 100,
       "preview": false
     },
     {
       "key": "canonical",
       "label": "Canonical-link",
       "old": 97,
-      "new": 0,
+      "new": 100,
       "preview": true
     },
     {
@@ -211,7 +211,7 @@
       "key": "open_graph",
       "label": "Deling på sociale medier (Open Graph)",
       "old": 0,
-      "new": 56,
+      "new": 100,
       "preview": false
     },
     {
@@ -225,14 +225,14 @@
       "key": "structured_data",
       "label": "Strukturerede data (schema.org)",
       "old": 0,
-      "new": 94,
+      "new": 100,
       "preview": false
     },
     {
       "key": "image_alt",
       "label": "Alt-tekst på billeder",
       "old": 78,
-      "new": 11,
+      "new": 100,
       "preview": false
     },
     {
@@ -246,7 +246,7 @@
       "key": "image_formats",
       "label": "Moderne billedformater (WebP/AVIF)",
       "old": 50,
-      "new": 50,
+      "new": 100,
       "preview": false
     },
     {
@@ -325,109 +325,109 @@
       "path": "/",
       "title": "Elgård Regnskab | Bogholderi, revision, moms, skat, rådgivning v. Liselotte Elgård Nielsen",
       "old": 55,
-      "new": 84
+      "new": 100
     },
     {
       "path": "/",
       "title": "Elgård Regnskab | Bogholderi, revision, moms, skat, rådgivning v. Liselotte Elgård Nielsen",
       "old": 55,
-      "new": 84
+      "new": 100
     },
     {
       "path": "/hello-world/",
       "title": "Velkommen til Elgård Regnskab | Elgård Regnskab",
       "old": 71,
-      "new": 79
+      "new": 100
     },
     {
       "path": "/moms-skat/",
       "title": "Moms & skat | Elgård Regnskab",
       "old": 68,
-      "new": 76
+      "new": 100
     },
     {
       "path": "/moms-skat/",
       "title": "Moms & skat | Elgård Regnskab",
       "old": 68,
-      "new": 76
+      "new": 100
     },
     {
       "path": "/om-os/",
       "title": "Om os | Elgård Regnskab",
       "old": 63,
-      "new": 79
+      "new": 100
     },
     {
       "path": "/om-os/",
       "title": "Om os | Elgård Regnskab",
       "old": 63,
-      "new": 79
+      "new": 100
     },
     {
       "path": "/raadgivning-og-kurser/",
       "title": "Rådgivning og kurser | Elgård Regnskab",
       "old": 74,
-      "new": 84
+      "new": 100
     },
     {
       "path": "/raadgivning-og-kurser/",
       "title": "Rådgivning og kurser | Elgård Regnskab",
       "old": 74,
-      "new": 84
+      "new": 100
     },
     {
       "path": "/regnskabsservice/",
       "title": "Regnskabsservice | Elgård Regnskab",
       "old": 74,
-      "new": 76
+      "new": 100
     },
     {
       "path": "/regnskabsservice/",
       "title": "Regnskabsservice | Elgård Regnskab",
       "old": 74,
-      "new": 76
+      "new": 100
     },
     {
       "path": "/category/uncategorized/",
       "title": "Uncategorized | Elgård Regnskab",
       "old": 66,
-      "new": 76
+      "new": null
     },
     {
       "path": "/regnskabsservice/bogholderi/",
       "title": "Bogholderi | Elgård Regnskab",
       "old": 68,
-      "new": 76
+      "new": 100
     },
     {
       "path": "/regnskabsservice/bogholderi/",
       "title": "Bogholderi | Elgård Regnskab",
       "old": 68,
-      "new": 76
+      "new": 100
     },
     {
       "path": "/regnskabsservice/fremlaeggelse-af-regnskab/",
       "title": "Fremlæggelse af regnskab | Elgård Regnskab",
       "old": 74,
-      "new": 82
+      "new": 100
     },
     {
       "path": "/regnskabsservice/fremlaeggelse-af-regnskab/",
       "title": "Fremlæggelse af regnskab | Elgård Regnskab",
       "old": 74,
-      "new": 82
+      "new": 100
     },
     {
       "path": "/regnskabsservice/revision/",
       "title": "Revision | Elgård Regnskab",
       "old": 71,
-      "new": 76
+      "new": 100
     },
     {
       "path": "/regnskabsservice/revision/",
       "title": "Revision | Elgård Regnskab",
       "old": 71,
-      "new": 76
+      "new": 100
     }
   ],
   "lighthouse": {
@@ -448,16 +448,16 @@
     },
     "new": {
       "scores": {
-        "performance": 99,
-        "accessibility": 92,
+        "performance": 100,
+        "accessibility": 100,
         "best-practices": 100,
-        "seo": 58
+        "seo": 100
       },
-      "lcp_ms": 1620,
+      "lcp_ms": 1137,
       "tbt_ms": 0,
-      "cls": 0.0021249690630546,
-      "bytes": 221388,
-      "requests": 11,
+      "cls": 0.01475727368769335,
+      "bytes": 231206,
+      "requests": 10,
       "final_url": "https://12fwww.github.io/elgard-dk-www/",
       "form_factor": "mobile"
     }
