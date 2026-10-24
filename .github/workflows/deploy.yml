@@ -19,10 +19,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      # Versions verified on 12fwww/etch-dk-www (2026-10). Builds with the repo's package-lock and uploads dist/ as the Pages artifact.
-      - uses: withastro/action@v6
+      - uses: actions/setup-node@v4
         with:
           node-version: 24
+          cache: npm
+      - name: Install and build
+        env:
+          PUBLIC_PRODUCTION_URL: https://elgard.dk
+          PUBLIC_PREVIEW: "1"
+        run: |
+          npm ci
+          npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
 
   deploy:
     needs: build
