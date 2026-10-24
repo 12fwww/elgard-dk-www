@@ -1,5 +1,5 @@
 ---
-import { Picture } from 'astro:assets';
+import { Picture, Image } from 'astro:assets';
 import Layout from '../components/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -13,6 +13,8 @@ import { foundCredit } from '../data/site.ts';
 import liselotte from '../assets/original/liselotte.jpg';
 import logo from '../assets/original/logo.png';
 import birkerod from '../assets/original/birkerod.jpg';
+import annemette from '../assets/original/annemette.jpg';
+import liselottePortrait from '../assets/original/liselotte-portrait.jpg';
 const B = import.meta.env.BASE_URL;
 const localBusiness = {
   '@context': 'https://schema.org',
@@ -49,25 +51,37 @@ const sumTotal = pickerTasks.reduce((s, t) => s + t.est, 0);
 
   <main>
     <section class="hero wrap" aria-label="Forside">
-      <h1 class="hero-name" data-reveal>Velkommen hos Elgård Regnskab</h1>
-      <p class="hero-sentence" data-reveal>Mere tid til forretning og familie</p>
-      <div class="hero-strip" data-reveal>
-        <Picture src={liselotte} formats={['avif', 'webp']} widths={[480, 960, 1440, 2048]} sizes="(min-width: 48em) 1400px, 94vw" alt="Liselotte Elgård Nielsen, revisor og indehaver af Elgård Regnskab, på kontoret i Birkerød" loading="eager" />
-      </div>
-      <p class="hero-support" data-reveal>
-        Vi klarer bogføring, frister, moms og regnskab — så du behøver bare at være
-        selvstændig.
-      </p>
-      <div class="hero-cta" data-reveal>
-        <a class="button" href={org.phoneHref}>Ring {org.phone}</a>
+      <div class="hero-grid">
+        <div class="hero-text" data-reveal>
+          <h1 class="hero-name">Velkommen hos Elgård Regnskab</h1>
+          <p class="hero-support">
+            Vi klarer bogføring, frister, moms og regnskab — så du behøver bare at være
+            selvstændig.
+          </p>
+          <div class="hero-cta">
+            <a class="button" href={org.phoneHref}>Ring {org.phone}</a>
+          </div>
+        </div>
+        <div class="hero-panel" data-reveal>
+          <p class="hero-sentence">Mere tid til forretning og familie</p>
+          <ul class="hero-points">
+            <li>Frister og moms afregnet til tiden</li>
+            <li>Løbende bogføring, så regnskabet stemmer</li>
+            <li>Personlig rådgivning, der giver mening</li>
+          </ul>
+        </div>
+        <figure class="hero-figure">
+          <Picture src={annemette} formats={['avif', 'webp']} widths={[340, 512, 722]} sizes="(min-width: 56em) 30rem, (min-width: 48em) 22rem, 88vw" alt="På kontoret hos Elgård Regnskab, RevisorHuset i Birkerød" loading="eager" />
+          <figcaption class="hero-credit">Kontoret i Birkerød</figcaption>
+        </figure>
       </div>
     </section>
 
     <section class="picker section wrap" aria-labelledby="picker-h">
       <div class="grid">
         <div style="grid-column: 1 / -1;">
-          <h2 id="picker-h" class="picker-head" data-reveal>Hvad overdrer vi?</h2>
-          <p class="picker-intro" data-reveal>
+          <h2 id="picker-h" class="picker-head">Hvad overdrer vi?</h2>
+          <p class="picker-intro">
             Vælg det, du gider mindst at bruge tid på. Vi estimerer, hvor meget det koster
             dig om ugen.
           </p>
@@ -114,55 +128,69 @@ const sumTotal = pickerTasks.reduce((s, t) => s + t.est, 0);
     </section>
 
     <section class="proof section wrap" aria-labelledby="proof-h">
-      <h2 id="proof-h" class="head" data-reveal>Vi kender regnskabet fra</h2>
-      <p class="proof-text" data-reveal>
-        {branches.map((b, i) => <span class={i === 0 ? 'word lit on' : 'word lit'}>{b}</span>)}
-        <span class="word">.</span>
-      </p>
-      <figure class="street-figure" data-reveal>
-        <Picture src={birkerod} formats={['avif', 'webp']} widths={[480, 960, 1440, 1920]} sizes="(min-width: 48em) 896px, 94vw" alt="Birkerød Hovedgade" loading="lazy" />
-        <figcaption>
-          Birkerød Hovedgade — {foundCredit.license}, via {foundCredit.via}.
-        </figcaption>
-      </figure>
+      <div class="proof-grid">
+        <div>
+          <h2 id="proof-h" class="head" data-reveal>Vi kender regnskabet fra</h2>
+          <ul class="branch-pills" data-reveal>
+            {branches.map((b) => (
+              <li class="branch-pill">{b}</li>
+            ))}
+          </ul>
+        </div>
+        <figure class="street-figure" data-reveal>
+          <Picture src={birkerod} formats={['avif', 'webp']} widths={[480, 960, 1440, 1920]} sizes="(min-width: 48em) 39rem, 94vw" alt="Birkerød Hovedgade" loading="lazy" />
+          <figcaption>
+            Birkerød Hovedgade — {foundCredit.license}, via {foundCredit.via}.
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="section wrap" aria-labelledby="om-h">
       <h2 id="om-h" class="head" data-reveal>Liselotte Elgård Nielsen</h2>
-      <div data-reveal>
-        <figure class="portrait-float-wrap" style="margin: 0;">
-          <span class="portrait-float shutter drift" data-reveal>
-            <Picture src={liselotte} formats={['avif', 'webp']} widths={[340, 512, 767]} sizes="(min-width: 48em) 184px, 44vw" alt="Liselotte Elgård Nielsen i kontoret i Birkerød" loading="lazy" />
-          </span>
+      <div class="about-grid">
+        <div>
+          <p class="about-bio" data-reveal>
+            Uddannet revisor med mange års erfaring for store, mellemstore og små virksomheder.
+            Hun sætter en ære i at tale, så enhver kan forstå, hvad sagen handler om — og
+            guider mindre og mellemstore virksomheder igennem junglen af papirer fra det
+            offentlige, så frister vedrørende skat og moms overholdes.
+          </p>
+          <dl class="about-facts" data-reveal>
+            <div><dt>Adresse</dt><dd>{org.street}, {org.city}</dd></div>
+            <div><dt>CVR</dt><dd>{org.cvr}</dd></div>
+            <div><dt>Åbent</dt><dd>{org.hours}</dd></div>
+          </dl>
+        </div>
+        <figure class="portrait-side" data-reveal>
+          <Image src={liselottePortrait} alt="Liselotte Elgård Nielsen, revisor og indehaver af Elgård Regnskab" loading="lazy" />
+          <figcaption>Liselotte Elgård Nielsen, revisor</figcaption>
         </figure>
-        <p class="about-bio">
-          Uddannet revisor med mange års erfaring for store, mellemstore og små virksomheder.
-          Hun sætter en ære i at tale, så enhver kan forstå, hvad sagen handler om — og
-          guider mindre og mellemstore virksomheder igennem junglen af papirer fra det
-          offentlige, så frister vedrørende skat og moms overholdes.
-        </p>
-        <dl class="about-facts" style="margin-top: 2rem;">
-          <div><dt>Adresse</dt><dd>{org.street}, {org.city}</dd></div>
-          <div><dt>CVR</dt><dd>{org.cvr}</dd></div>
-          <div><dt>Åbent</dt><dd>{org.hours}</dd></div>
-        </dl>
       </div>
     </section>
 
     <section class="section wrap" aria-labelledby="faq-h">
-      <h2 id="faq-h" class="faq-q" data-reveal>Hvad kunderne spørger til</h2>
-      <div class="faq-list" data-reveal>
-        {faq.map((f) => (
-          <details>
-            <summary>{f.q}</summary>
-            <p class="faq-a">{f.a}</p>
-          </details>
-        ))}
+      <div class="faq-grid">
+        <div>
+          <h2 id="faq-h" class="faq-q" data-reveal>Hvad kunderne spørger til</h2>
+          <p class="faq-side" data-reveal>
+            Spørgsmålene fra de selvstændige, vi sidder for hver uge. Kan du ikke finde
+            dit svar, så ring — vi besvarer telefonen alle hverdage 9–16.
+          </p>
+        </div>
+        <div class="faq-list" data-reveal>
+          {faq.map((f) => (
+            <details>
+              <summary>{f.q}</summary>
+              <p class="faq-a">{f.a}</p>
+            </details>
+          ))}
+        </div>
       </div>
     </section>
 
     <section class="close">
-      <div class="wrap" style="display: flex; flex-direction: column; flex: 1;">
+      <div class="wrap" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
         <h2 data-reveal>Ring i dag. Resten klarer vi.</h2>
         <div class="close-row" data-reveal>
           <p>
@@ -202,19 +230,5 @@ const sumTotal = pickerTasks.reduce((s, t) => s + t.est, 0);
         render();
       });
     }
-
-    const lits = Array.from(document.querySelectorAll('.proof-text .word.lit'));
-    if (lits.length) {
-      let i = 0;
-      const tick = () => {
-        lits.forEach((el, j) => el.classList.toggle('on', j === i));
-        i = (i + 1) % lits.length;
-      };
-      tick();
-      setInterval(tick, 2000);
-    }
   </script>
-  <style>
-    .proof-text .lit.on { color: var(--ink); }
-  </style>
 </Layout>

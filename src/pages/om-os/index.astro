@@ -27,43 +27,47 @@ const path = '/om-os/';
       <p class="lead">Administration, bogføring, regnskab og selvangivelse — for selvstændige i mange brancher.</p>
     </section>
     <section class="section wrap" style="padding-top: 0;">
-      <p style="max-width: 58ch;">
-        Hos Elgård Regnskab udfører vi administration, bogføring, regnskab og
-        selvangivelse for små og mellemstore selvstændige virksomheder og selskaber.
-      </p>
-      <p style="max-width: 58ch;">
-        Kunderne repræsenterer en del forskellige brancher: {branches.join(', ')}. Kort
-        sagt repræsenterer vore kunder meget forskellige typer regnskabsrelaterede
-        opgaver.
-      </p>
-      <p style="max-width: 58ch;">
-        Vi udfører således afregning af virksomheder både med og uden moms, difference
-        moms og delvis momsregistrerede, samt afregning af lønsumsafgift.
-      </p>
-      <div class="photo-row">
-        <figure>
-          <Picture src={annemette} formats={['avif', 'webp']} widths={[480, 722]} sizes="(min-width: 48em) 240px, 100vw" alt="Annemette på kontoret i Elgård Regnskab" loading="lazy" />
-          <figcaption>På kontoret, Blokken 90 i Birkerød.</figcaption>
-        </figure>
-        <figure>
-          <Picture src={birkerod} formats={['avif', 'webp']} widths={[480, 960, 1440, 1920]} sizes="(min-width: 48em) 672px, 94vw" alt="Birkerød Hovedgade" loading="lazy" />
-          <figcaption>
-            Birkerød Hovedgade — {foundCredit.license}, via {foundCredit.via}.
-          </figcaption>
-        </figure>
-      </div>
-      <h2 class="head" style="margin-top: 4rem; font-size: var(--step-lead);">Kontakt os</h2>
-      <p style="max-width: 58ch;">
-        Vi har kontor på Blokken 90 i Birkerød. {org.hours} kan du møde os på kontoret:
-      </p>
-      <div class="contact-card" style="margin-top: 2rem;">
-        <dl>
-          <div><dt>Adresse</dt><dd>{org.street}, {org.city}</dd></div>
-          <div><dt>Telefon</dt><dd><a class="link-plain" href={org.officePhoneHref}>Kontor {org.officePhone}</a> · <a class="link-plain" href={org.phoneHref}>Direkte {org.phone}</a></dd></div>
-          <div><dt>E-mail</dt><dd><a class="link-plain" href={org.emailHref}>{org.email}</a></dd></div>
-          <div><dt>CVR</dt><dd>{org.cvr}</dd></div>
-          <div><dt>Åbent</dt><dd>{org.hours}. {org.phoneHours}.</dd></div>
-        </dl>
+      <div class="inner-grid">
+        <div>
+          <p class="prose">
+            Hos Elgård Regnskab udfører vi administration, bogføring, regnskab og
+            selvangivelse for små og mellemstore selvstændige virksomheder og selskaber.
+          </p>
+          <p class="prose">
+            Kunderne repræsenterer en del forskellige brancher: {branches.join(', ')}. Kort
+            sagt repræsenterer vore kunder meget forskellige typer regnskabsrelaterede
+            opgaver. Vi udfører afregning af virksomheder både med og uden moms, difference
+            moms og delvis momsregistrerede, samt afregning af lønsumsafgift.
+          </p>
+          <div class="photo-row">
+            <figure>
+              <Picture src={annemette} formats={['avif', 'webp']} widths={[340, 512, 722]} sizes="(min-width: 48em) 240px, 40vw" alt="Annemette på kontoret i Elgård Regnskab" loading="lazy" />
+              <figcaption>På kontoret, Blokken 90 i Birkerød.</figcaption>
+            </figure>
+            <figure>
+              <Picture src={birkerod} formats={['avif', 'webp']} widths={[480, 960, 1440, 1920]} sizes="(min-width: 48em) 672px, 60vw" alt="Birkerød Hovedgade" loading="lazy" />
+              <figcaption>
+                Birkerød Hovedgade — {foundCredit.license}, via {foundCredit.via}.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div>
+          <div class="aside">
+            <div class="aside-card">
+              <h3>Kontakt os</h3>
+              <p class="mini" style="margin-top: 0;">Vi har kontor på Blokken 90 i Birkerød. {org.hours} kan du møde os på kontoret.</p>
+              <dl style="margin-top: 1.25rem;">
+                <div><dt>Adresse</dt><dd>{org.street}, {org.city}</dd></div>
+                <div><dt>Kontor</dt><dd><a class="link-plain" href={org.officePhoneHref}>{org.officePhone}</a></dd></div>
+                <div><dt>Direkte</dt><dd><a class="link-plain" href={org.phoneHref}>{org.phone}</a></dd></div>
+                <div><dt>E-mail</dt><dd><a class="link-plain" href={org.emailHref}>{org.email}</a></dd></div>
+                <div><dt>CVR</dt><dd>{org.cvr}</dd></div>
+                <div><dt>Åbent</dt><dd>{org.hours}</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>

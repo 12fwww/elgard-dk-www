@@ -36,23 +36,51 @@ const items = [
       </p>
     </section>
     <section class="section wrap" style="padding-top: 0;">
-      <ul class="sublist">
-        {items.map((s) => (
-          <li>
-            <a href={s.href}>{s.name}</a> — {s.text}
-          </li>
-        ))}
-      </ul>
-      <p style="margin-top: 2.5rem; max-width: 58ch;" class="muted">
-        Vi udfører afregning af virksomheder både med og uden moms, difference moms og
-        delvis momsregistrerede samt afregning af lønsumsafgift.
-      </p>
-      <div class="contact-card" style="margin-top: 3.5rem;">
-        <dl>
-          <div><dt>Kontakt</dt><dd><a class="link-plain" href={org.phoneHref}>Direkte {org.phone}</a> · <a class="link-plain" href={org.officePhoneHref}>Kontor {org.officePhone}</a> · <a class="link-plain" href={org.emailHref}>{org.email}</a></dd></div>
-          <div><dt>Kontor</dt><dd>{org.street}, {org.city} · CVR {org.cvr}</dd></div>
-          <div><dt>Åbent</dt><dd>{org.hours}. {org.phoneHours}.</dd></div>
-        </dl>
+      <div class="inner-grid">
+        <div>
+          <p class="prose">
+            Vores regnskabsservice kan indeholde lige det, din virksomhed har behov for. Vi
+            kan tilbyde &bdquo;hele pakken&rdquo;, hvor vi klarer det hele — bogholderi,
+            lønadministration, momsafregning, fakturering og mere. Men vi har også kunder,
+            der selv varetager alt dette og kun benytter os i forbindelse med
+            årsregnskaber.
+          </p>
+          <ul class="sublist" style="margin-top: 2.5rem;">
+            {items.map((s) => (
+              <li>
+                <a href={s.href}>{s.name}</a> — {s.text}
+              </li>
+            ))}
+          </ul>
+          <p style="margin-top: 2.5rem;" class="muted prose">
+            Vi udfører afregning af virksomheder både med og uden moms, difference moms og
+            delvis momsregistrerede samt afregning af lønsumsafgift.
+          </p>
+        </div>
+        <div>
+          <div class="aside">
+            <div class="aside-card">
+              <h3>Alle ydelser</h3>
+              <ul>
+                <li><a class="link-plain" href={`${B}/regnskabsservice/bogholderi/`}>Bogholderi</a></li>
+                <li><a class="link-plain" href={`${B}/regnskabsservice/fremlaeggelse-af-regnskab/`}>Fremlæggelse af regnskab</a></li>
+                <li><a class="link-plain" href={`${B}/regnskabsservice/revision/`}>Revision</a></li>
+                <li><a class="link-plain" href={`${B}/moms-skat/`}>Moms, told og skat</a></li>
+                <li>Fakturering</li>
+                <li>Lønadministration</li>
+              </ul>
+            </div>
+            <div class="aside-card">
+              <h3>Kontakt</h3>
+              <dl>
+                <div><dt>Direkte</dt><dd><a class="link-plain" href={org.phoneHref}>{org.phone}</a></dd></div>
+                <div><dt>Kontor</dt><dd><a class="link-plain" href={org.officePhoneHref}>{org.officePhone}</a></dd></div>
+                <div><dt>Adresse</dt><dd>{org.street}, {org.city}</dd></div>
+                <div><dt>Åbent</dt><dd>{org.hours}</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>

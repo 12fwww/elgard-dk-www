@@ -1,26 +1,27 @@
 {
- "url": "http://localhost:4323/elgard-dk-www/",
- "at": "2026-10-23T22:43:00.789Z",
+ "url": "http://127.0.0.1:4322/elgard-dk-www/",
+ "at": "2026-10-24T11:32:18.475Z",
  "allow": [],
  "viewports": [
   {
    "width": 1440,
    "height": 900,
    "load": "load",
-   "screens": 7,
+   "screens": 8,
    "filled": [
-    0.48,
-    0.69,
-    0.52,
-    0.74,
-    0.25,
-    0.89,
+    0.44,
+    0.67,
+    0.43,
+    0.87,
+    0.28,
+    0.22,
+    0.64,
     1
    ],
    "motion": {
-    "elements": 22,
+    "elements": 20,
     "css": 1,
-    "transitions": 21,
+    "transitions": 19,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -31,10 +32,10 @@
      "h": 900
     },
     "page": {
-     "height": 5904,
-     "screens": 6.6,
-     "words": 425,
-     "img": 5,
+     "height": 7180,
+     "screens": 8,
+     "words": 448,
+     "img": 6,
      "video": 0,
      "canvas": 0,
      "svg": 0,
@@ -43,13 +44,14 @@
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 3,
+     "realPictures": 4,
      "videoCount": 0,
      "uiPictures": 0,
      "pictureSamples": [
-      "liselotte.tzXjvxfm_4ugg3.avif",
+      "liselotte.tzXjvxfm_ZSMjah.avif",
       "birkerod.rmencAsF_Z1wunxo.avif",
-      "liselotte.tzXjvxfm_Z2eB8YD.avif"
+      "liselotte.tzXjvxfm_Z2eB8YD.avif",
+      "annemette.1-YXm5Dc_1N51ng.avif"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -61,8 +63,8 @@
      "words": 4,
      "chars": 29,
      "lines": 2,
-     "size": 48,
-     "vw": 3.3,
+     "size": 34,
+     "vw": 2.4,
      "font": "Open Sans",
      "weight": 700,
      "tracking": -0.025,
@@ -72,8 +74,8 @@
      "mono": false,
      "align": "left",
      "position": "left",
-     "widthRatio": 0.34,
-     "top": 114,
+     "widthRatio": 0.23,
+     "top": 390,
      "tag": "h1",
      "kind": "heading"
     },
@@ -81,7 +83,7 @@
      "text": "Velkommen hos Elgård Regnskab",
      "words": 4,
      "lines": 2,
-     "size": 48,
+     "size": 34,
      "font": "Open Sans"
     },
     "headings": [
@@ -90,8 +92,8 @@
       "words": 4,
       "chars": 29,
       "lines": 2,
-      "size": 48,
-      "vw": 3.3,
+      "size": 34,
+      "vw": 2.4,
       "font": "Open Sans",
       "weight": 700,
       "tracking": -0.025,
@@ -101,31 +103,10 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.34,
-      "top": 114,
+      "widthRatio": 0.23,
+      "top": 390,
       "tag": "h1",
       "kind": "heading"
-     },
-     {
-      "text": "Mere tid til forretning og familie",
-      "words": 6,
-      "chars": 34,
-      "lines": 2,
-      "size": 28,
-      "vw": 1.9,
-      "font": "Open Sans",
-      "weight": 700,
-      "tracking": -0.02,
-      "leading": 1.25,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "left",
-      "widthRatio": 0.29,
-      "top": 229,
-      "tag": "p",
-      "kind": "statement"
      },
      {
       "text": "Hvad overdrer vi?",
@@ -144,7 +125,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.42,
-      "top": 1077,
+      "top": 1200,
       "tag": "h2",
       "kind": "heading"
      },
@@ -165,7 +146,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.96,
-      "top": 1748,
+      "top": 1847,
       "tag": "h2",
       "kind": "heading"
      },
@@ -186,7 +167,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.96,
-      "top": 2405,
+      "top": 2528,
       "tag": "h2",
       "kind": "heading"
      },
@@ -207,7 +188,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.96,
-      "top": 3419,
+      "top": 3586,
       "tag": "h2",
       "kind": "heading"
      },
@@ -228,7 +209,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.3,
-      "top": 3894,
+      "top": 5170,
       "tag": "h2",
       "kind": "heading"
      },
@@ -249,7 +230,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.53,
-      "top": 4673,
+      "top": 5949,
       "tag": "h2",
       "kind": "heading"
      },
@@ -270,18 +251,18 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.96,
-      "top": 5684,
+      "top": 6959,
       "tag": "a",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 9,
+     "count": 8,
      "maxLines": 2,
      "over2Lines": 0,
-     "statements": 1,
+     "statements": 0,
      "centered": 0,
-     "medianWords": 5,
+     "medianWords": 4,
      "mixedFontHeadings": 0
     },
     "type": {
@@ -299,7 +280,7 @@
       21,
       24,
       26,
-      28,
+      34,
       48,
       96,
       112
@@ -329,7 +310,7 @@
      "microLabelShare": 0,
      "microSamples": [],
      "upperShare": 0,
-     "centerShare": 0.04,
+     "centerShare": 0.03,
      "smallText": 0
     },
     "eyebrows": [],
@@ -345,7 +326,7 @@
      "sectionBgs": [
       {
        "color": "#f4f7fa",
-       "top": 326,
+       "top": 96,
        "hsl": {
         "h": 210,
         "s": 0.37,
@@ -354,7 +335,7 @@
       },
       {
        "color": "#2d3940",
-       "top": 4601,
+       "top": 5877,
        "hsl": {
         "h": 202,
         "s": 0.17,
@@ -365,11 +346,11 @@
      "textColors": [
       {
        "color": "#555c61",
-       "share": 0.45
+       "share": 0.46
       },
       {
        "color": "#2d3940",
-       "share": 0.43
+       "share": 0.42
       },
       {
        "color": "#d9dbdd",
@@ -394,14 +375,6 @@
       "fg": "#2d3940"
      },
      "lowContrast": [
-      {
-       "text": "Ring 2684 9809",
-       "ratio": 3.6,
-       "need": 4.5,
-       "size": 18,
-       "fg": "#ffffff",
-       "bg": "#1b8ed6"
-      },
       {
        "text": "Ring 2684 9809",
        "ratio": 3.6,
@@ -441,7 +414,7 @@
      "roundedBoxes": 0,
      "boxRadius": 0,
      "squareMedia": 0,
-     "roundedMedia": 2,
+     "roundedMedia": 3,
      "mediaRadius": 14,
      "textShadow": 0,
      "cardRows": []
@@ -449,7 +422,7 @@
     "heroMedia": [
      {
       "type": "img",
-      "ratio": 0.37
+      "ratio": 0.3
      }
     ],
     "nav": {
@@ -469,19 +442,20 @@
    "width": 768,
    "height": 1024,
    "load": "load",
-   "screens": 6,
+   "screens": 7,
    "filled": [
-    0.49,
-    0.66,
-    0.82,
-    0.41,
-    0.98,
+    0.71,
+    0.69,
+    0.83,
+    0.56,
+    0.59,
+    1,
     1
    ],
    "motion": {
-    "elements": 22,
+    "elements": 20,
     "css": 1,
-    "transitions": 21,
+    "transitions": 19,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -492,10 +466,10 @@
      "h": 1024
     },
     "page": {
-     "height": 5553,
-     "screens": 5.4,
-     "words": 425,
-     "img": 5,
+     "height": 6298,
+     "screens": 6.2,
+     "words": 448,
+     "img": 6,
      "video": 0,
      "canvas": 0,
      "svg": 0,
@@ -504,13 +478,14 @@
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 3,
+     "realPictures": 4,
      "videoCount": 0,
      "uiPictures": 0,
      "pictureSamples": [
-      "liselotte.tzXjvxfm_4ugg3.avif",
+      "liselotte.tzXjvxfm_ZSMjah.avif",
       "birkerod.rmencAsF_Z1wunxo.avif",
-      "liselotte.tzXjvxfm_Z2eB8YD.avif"
+      "liselotte.tzXjvxfm_Z2eB8YD.avif",
+      "annemette.1-YXm5Dc_1N51ng.avif"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -518,31 +493,31 @@
      "emoji": []
     },
     "hero": {
-     "text": "Velkommen hos Elgård Regnskab",
-     "words": 4,
-     "chars": 29,
-     "lines": 2,
+     "text": "Hvad overdrer vi?",
+     "words": 3,
+     "chars": 17,
+     "lines": 1,
      "size": 39.2,
      "vw": 5.1,
      "font": "Open Sans",
      "weight": 700,
      "tracking": -0.025,
-     "leading": 1.05,
+     "leading": 1,
      "upper": false,
      "italic": false,
      "mono": false,
      "align": "left",
      "position": "left",
-     "widthRatio": 0.52,
-     "top": 120,
-     "tag": "h1",
+     "widthRatio": 0.64,
+     "top": 642,
+     "tag": "h2",
      "kind": "heading"
     },
     "h1": {
      "text": "Velkommen hos Elgård Regnskab",
      "words": 4,
      "lines": 2,
-     "size": 39.2,
+     "size": 30,
      "font": "Open Sans"
     },
     "headings": [
@@ -551,8 +526,8 @@
       "words": 4,
       "chars": 29,
       "lines": 2,
-      "size": 39.2,
-      "vw": 5.1,
+      "size": 30,
+      "vw": 3.9,
       "font": "Open Sans",
       "weight": 700,
       "tracking": -0.025,
@@ -562,8 +537,8 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.52,
-      "top": 120,
+      "widthRatio": 0.36,
+      "top": 150,
       "tag": "h1",
       "kind": "heading"
      },
@@ -584,7 +559,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.64,
-      "top": 809,
+      "top": 642,
       "tag": "h2",
       "kind": "heading"
      },
@@ -605,7 +580,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.96,
-      "top": 1403,
+      "top": 1237,
       "tag": "h2",
       "kind": "heading"
      },
@@ -626,7 +601,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.96,
-      "top": 2003,
+      "top": 1812,
       "tag": "h2",
       "kind": "heading"
      },
@@ -647,7 +622,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.96,
-      "top": 2881,
+      "top": 2754,
       "tag": "h2",
       "kind": "heading"
      },
@@ -668,7 +643,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.47,
-      "top": 3510,
+      "top": 4255,
       "tag": "h2",
       "kind": "heading"
      },
@@ -689,7 +664,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.64,
-      "top": 4223,
+      "top": 4968,
       "tag": "h2",
       "kind": "heading"
      },
@@ -710,7 +685,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.96,
-      "top": 5346,
+      "top": 6091,
       "tag": "a",
       "kind": "heading"
      }
@@ -739,7 +714,7 @@
       19,
       22,
       23,
-      24,
+      30,
       39,
       61,
       69
@@ -754,7 +729,7 @@
       "tracking": 0,
       "contrast": 6.3
      },
-     "measureChars": 31,
+     "measureChars": 47,
      "max": {
       "size": 69.1,
       "vw": 9,
@@ -769,7 +744,7 @@
      "microLabelShare": 0,
      "microSamples": [],
      "upperShare": 0,
-     "centerShare": 0.04,
+     "centerShare": 0.03,
      "smallText": 0
     },
     "eyebrows": [],
@@ -785,7 +760,7 @@
      "sectionBgs": [
       {
        "color": "#f4f7fa",
-       "top": 763,
+       "top": 596,
        "hsl": {
         "h": 210,
         "s": 0.37,
@@ -794,7 +769,7 @@
       },
       {
        "color": "#2d3940",
-       "top": 4143,
+       "top": 4888,
        "hsl": {
         "h": 202,
         "s": 0.17,
@@ -805,11 +780,11 @@
      "textColors": [
       {
        "color": "#555c61",
-       "share": 0.45
+       "share": 0.46
       },
       {
        "color": "#2d3940",
-       "share": 0.43
+       "share": 0.42
       },
       {
        "color": "#d9dbdd",
@@ -885,7 +860,7 @@
      "roundedBoxes": 0,
      "boxRadius": 0,
      "squareMedia": 0,
-     "roundedMedia": 2,
+     "roundedMedia": 3,
      "mediaRadius": 14,
      "textShadow": 0,
      "cardRows": []
@@ -893,7 +868,7 @@
     "heroMedia": [
      {
       "type": "img",
-      "ratio": 0.17
+      "ratio": 0.12
      }
     ],
     "nav": {
@@ -913,20 +888,22 @@
    "width": 390,
    "height": 844,
    "load": "load",
-   "screens": 7,
+   "screens": 9,
    "filled": [
-    0.54,
-    0.91,
+    0.66,
+    0.67,
     0.68,
-    0.83,
-    0.52,
-    0.94,
+    0.92,
+    0.32,
+    0.46,
+    0.82,
+    1,
     1
    ],
    "motion": {
-    "elements": 23,
+    "elements": 20,
     "css": 1,
-    "transitions": 22,
+    "transitions": 19,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -937,10 +914,10 @@
      "h": 844
     },
     "page": {
-     "height": 5719,
-     "screens": 6.8,
-     "words": 418,
-     "img": 5,
+     "height": 6907,
+     "screens": 8.2,
+     "words": 441,
+     "img": 6,
      "video": 0,
      "canvas": 0,
      "svg": 0,
@@ -949,13 +926,14 @@
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 3,
+     "realPictures": 4,
      "videoCount": 0,
      "uiPictures": 0,
      "pictureSamples": [
       "liselotte.tzXjvxfm_ZSMjah.avif",
       "birkerod.rmencAsF_qjBhn.avif",
-      "liselotte.tzXjvxfm_Z2eB8YD.avif"
+      "liselotte.tzXjvxfm_Z2eB8YD.avif",
+      "annemette.1-YXm5Dc_1N51ng.avif"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -967,8 +945,8 @@
      "words": 4,
      "chars": 29,
      "lines": 2,
-     "size": 29.3,
-     "vw": 7.5,
+     "size": 30.4,
+     "vw": 7.8,
      "font": "Open Sans",
      "weight": 700,
      "tracking": -0.025,
@@ -977,9 +955,9 @@
      "italic": false,
      "mono": false,
      "align": "left",
-     "position": "center",
-     "widthRatio": 0.77,
-     "top": 111,
+     "position": "left",
+     "widthRatio": 0.62,
+     "top": 94,
      "tag": "h1",
      "kind": "heading"
     },
@@ -987,7 +965,7 @@
      "text": "Velkommen hos Elgård Regnskab",
      "words": 4,
      "lines": 2,
-     "size": 29.3,
+     "size": 30.4,
      "font": "Open Sans"
     },
     "headings": [
@@ -996,8 +974,8 @@
       "words": 4,
       "chars": 29,
       "lines": 2,
-      "size": 29.3,
-      "vw": 7.5,
+      "size": 30.4,
+      "vw": 7.8,
       "font": "Open Sans",
       "weight": 700,
       "tracking": -0.025,
@@ -1006,9 +984,9 @@
       "italic": false,
       "mono": false,
       "align": "left",
-      "position": "center",
-      "widthRatio": 0.77,
-      "top": 111,
+      "position": "left",
+      "widthRatio": 0.62,
+      "top": 94,
       "tag": "h1",
       "kind": "heading"
      },
@@ -1029,7 +1007,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 827,
+      "top": 1216,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1050,7 +1028,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 1607,
+      "top": 1996,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1071,7 +1049,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 2306,
+      "top": 2695,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1092,7 +1070,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 3075,
+      "top": 3429,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1113,7 +1091,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.69,
-      "top": 3790,
+      "top": 4977,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1134,7 +1112,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.79,
-      "top": 4482,
+      "top": 5669,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1155,7 +1133,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 5454,
+      "top": 6641,
       "tag": "a",
       "kind": "heading"
      }
@@ -1185,10 +1163,11 @@
       19,
       20,
       29,
+      30,
       38,
       42
      ],
-     "sizeCount": 8,
+     "sizeCount": 9,
      "notLoaded": [],
      "body": {
       "font": "Open Sans",
@@ -1229,7 +1208,7 @@
      "sectionBgs": [
       {
        "color": "#f4f7fa",
-       "top": 783,
+       "top": 438,
        "hsl": {
         "h": 210,
         "s": 0.37,
@@ -1238,7 +1217,7 @@
       },
       {
        "color": "#2d3940",
-       "top": 4414,
+       "top": 5601,
        "hsl": {
         "h": 202,
         "s": 0.17,
@@ -1249,7 +1228,7 @@
      "textColors": [
       {
        "color": "#555c61",
-       "share": 0.45
+       "share": 0.46
       },
       {
        "color": "#2d3940",
@@ -1257,7 +1236,7 @@
       },
       {
        "color": "#d9dbdd",
-       "share": 0.08
+       "share": 0.07
       },
       {
        "color": "#d1d3d5",
@@ -1278,14 +1257,6 @@
       "fg": "#2d3940"
      },
      "lowContrast": [
-      {
-       "text": "Ring 2684 9809",
-       "ratio": 3.6,
-       "need": 4.5,
-       "size": 16.2,
-       "fg": "#ffffff",
-       "bg": "#1b8ed6"
-      },
       {
        "text": "Ring 2684 9809",
        "ratio": 3.6,
@@ -1325,7 +1296,7 @@
      "roundedBoxes": 0,
      "boxRadius": 0,
      "squareMedia": 0,
-     "roundedMedia": 2,
+     "roundedMedia": 4,
      "mediaRadius": 14,
      "textShadow": 0,
      "cardRows": []
@@ -1333,7 +1304,7 @@
     "heroMedia": [
      {
       "type": "img",
-      "ratio": 0.29
+      "ratio": 0.44
      }
     ],
     "nav": {
@@ -1355,7 +1326,7 @@
    "level": "WARN",
    "id": "contrast",
    "width": 1440,
-   "message": "Low-contrast text: \"Ring 2684 9809\" 3.6:1 needs 4.5:1; \"Ring 2684 9809\" 3.6:1 needs 4.5:1",
+   "message": "Low-contrast text: \"Ring 2684 9809\" 3.6:1 needs 4.5:1",
    "fix": "Darken or lighten the text colour.",
    "alsoAt": [
     768,
@@ -1372,13 +1343,6 @@
     768,
     390
    ]
-  },
-  {
-   "level": "FAIL",
-   "id": "few-pictures",
-   "width": 1440,
-   "message": "Only 3 picture(s) on the page (3 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
-   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
   },
   {
    "level": "WARN",
@@ -1403,7 +1367,8 @@
    "width": 768,
    "fold": "/workspace/seo-mirror/elgard-dk-www/.taste-skill/inspect/tablet-fold.jpg",
    "pages": [
-    "/workspace/seo-mirror/elgard-dk-www/.taste-skill/inspect/tablet-page-01.jpg"
+    "/workspace/seo-mirror/elgard-dk-www/.taste-skill/inspect/tablet-page-01.jpg",
+    "/workspace/seo-mirror/elgard-dk-www/.taste-skill/inspect/tablet-page-02.jpg"
    ]
   },
   {
@@ -1411,7 +1376,8 @@
    "width": 390,
    "fold": "/workspace/seo-mirror/elgard-dk-www/.taste-skill/inspect/mobile-fold.jpg",
    "pages": [
-    "/workspace/seo-mirror/elgard-dk-www/.taste-skill/inspect/mobile-page-01.jpg"
+    "/workspace/seo-mirror/elgard-dk-www/.taste-skill/inspect/mobile-page-01.jpg",
+    "/workspace/seo-mirror/elgard-dk-www/.taste-skill/inspect/mobile-page-02.jpg"
    ]
   }
  ]

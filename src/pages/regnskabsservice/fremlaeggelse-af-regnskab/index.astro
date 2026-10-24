@@ -30,21 +30,40 @@ const crumbObj = {
       <p class="lead">Når regnskabet skal præsenteres, er vi der.</p>
     </section>
     <section class="section wrap" style="padding-top: 0;">
-      <p style="max-width: 58ch;">
-        Nogle virksomheder og foreninger har behov for mundtlige præsentationer i
-        forbindelse med års- eller kvartalsregnskaber.
-      </p>
-      <p style="max-width: 58ch;">
-        Her kan vi tilbyde personligt fremmøde i forbindelse med fremlæggelse af jeres
-        regnskab for fx en generalforsamling eller en bestyrelse — så tallene forklares,
-        når de skal forklares, og spørgsmalerne besvares, imens de stadig er relevante.
-      </p>
-      <div class="contact-card" style="margin-top: 3.5rem;">
-        <dl>
-          <div><dt>Kontakt</dt><dd><a class="link-plain" href={org.phoneHref}>Direkte {org.phone}</a> · <a class="link-plain" href={org.officePhoneHref}>Kontor {org.officePhone}</a> · <a class="link-plain" href={org.emailHref}>{org.email}</a></dd></div>
-          <div><dt>Kontor</dt><dd>{org.street}, {org.city} · CVR {org.cvr}</dd></div>
-          <div><dt>Åbent</dt><dd>{org.hours}. {org.phoneHours}.</dd></div>
-        </dl>
+      <div class="inner-grid">
+        <div>
+          <p class="prose">
+            Når regnskabet skal præsenteres, er vi der. Nogle virksomheder og foreninger har
+            behov for mundtlige præsentationer i forbindelse med års- eller
+            kvartalsregnskaber — netop dér er et personligt fremmøde værd.
+          </p>
+          <p class="prose">
+            Her kan vi tilbyde personligt fremmøde i forbindelse med fremlæggelse af jeres
+            regnskab for fx en generalforsamling eller en bestyrelse — så tallene forklares,
+            når de skal forklares, og spørgsmalerne besvares, imens de stadig er relevante.
+          </p>
+        </div>
+        <div>
+          <div class="aside">
+            <div class="aside-card">
+              <h3>Hvad vi tilbyder</h3>
+              <ul>
+                <li>Personligt fremmøde ved generalforsamling eller bestyrelse</li>
+                <li>Præsentation af års- og kvartalsregnskab</li>
+                <li>Tallene forklares, når de skal forklares</li>
+              </ul>
+            </div>
+            <div class="aside-card">
+              <h3>Kontakt</h3>
+              <dl>
+                <div><dt>Direkte</dt><dd><a class="link-plain" href={org.phoneHref}>{org.phone}</a></dd></div>
+                <div><dt>Kontor</dt><dd><a class="link-plain" href={org.officePhoneHref}>{org.officePhone}</a></dd></div>
+                <div><dt>Adresse</dt><dd>{org.street}, {org.city}</dd></div>
+                <div><dt>Åbent</dt><dd>{org.hours}</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>

@@ -107,6 +107,21 @@ export const crumb = (label: string, path: string): object => ({
   ],
 });
 
+export const towns = [
+  'Farum',
+  'Blovstrød',
+  'Holte',
+  'Hørsholm',
+  'Allerød',
+  'Værløse',
+  'Lynge',
+  'Ganoløse',
+  'Slangerup',
+  'Hareskov',
+  'Bagsværd',
+  'Lillerød',
+];
+
 export const foundCredit = {
   title: 'Birkerød Hovedgade',
   creator: 'Hubertus (assumed)',

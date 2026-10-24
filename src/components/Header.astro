@@ -4,12 +4,34 @@ import { org } from '../data/site.ts';
 const B = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
+<div class="topbar">
+  <div class="topbar-inner wrap">
+    <a class="topbar-link" href={org.emailHref}>{org.email}</a>
+    <a class="topbar-link" href={org.phoneHref}>{org.phone}</a>
+  </div>
+</div>
 <header class="site-head wrap">
   <a href={`${B}/`} class="brand" aria-label="Elgård Regnskab — forside">
     <img src={B + "/assets/logo.png"} alt="" width="1177" height="420" class="logo" />
   </a>
-  <nav aria-label="Hovedmenu">
+  <nav aria-label="Hovedmenu" id="main-menu">
     {nav.map((n) => <a href={n.href}>{n.label}</a>)}
   </nav>
-  <a class="link-plain" href={org.phoneHref}>Tel {org.phone}</a>
+  <div class="head-actions">
+    <a class="head-phone" href={org.phoneHref}>Ring {org.phone}</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Åbn menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
+<script>
+  const btn = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('main-menu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      const open = document.body.classList.toggle('menu-open');
+      btn.setAttribute('aria-expanded', String(open));
+      btn.setAttribute('aria-label', open ? 'Luk menu' : 'Åbn menu');
+    });
+  }
+</script>

@@ -13,10 +13,12 @@ const { title, description, path, image, jsonld = [], type = 'website' } = Astro
 const production = (import.meta.env.PUBLIC_PRODUCTION_URL || Astro.site?.origin || '').replace(/\/$/, '');
 const preview = import.meta.env.PUBLIC_PREVIEW !== '0';
 const canonical = production + path;
-const og = image ? await getImage({ src: image, width: 1200, format: 'jpg' }) : null;
-const ogUrl = og
-  ? new URL(og.src.startsWith('/') ? og.src : `/${og.src}`, import.meta.env.SITE || Astro.site).href
-  : undefined;
+// Every page needs og:image (seo_check fails it otherwise): pages without a photo of
+// their own share src/assets/og.jpg, the strongest photo of the site.
+const fallback = Object.values(import.meta.glob<{ default: ImageMetadata }>('/src/assets/og.{jpg,jpeg,png,webp}', { eager: true }))[0]?.default;
+const ogSource = image ?? fallback;
+const og = ogSource ? await getImage({ src: ogSource, width: Math.min(1200, ogSource.width), format: 'jpg' }) : null;
+const ogUrl = og ? new URL(og.src.startsWith('/') ? og.src : `/${og.src}`, import.meta.env.SITE || Astro.site).href : undefined;
 ---
 
 <title>{title}</title>

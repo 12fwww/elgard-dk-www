@@ -33,21 +33,42 @@ const crumbObj = {
       </p>
     </section>
     <section class="section wrap" style="padding-top: 0;">
-      <p style="max-width: 58ch;">
-        Elgård Regnskab samarbejder med statsautoriseret revisor
-        <a class="link-plain" href="http://rygecarlsen.dk/" target="_blank" rel="noopener">Claus Carlsen</a>.
-      </p>
-      <p style="max-width: 58ch;">
-        Samarbejdet giver mulighed for, at vi kan sammensætte opgaver omkring bogføring,
-        administration og revision på den måde, der passer bedst til din virksomheds
-        behov — fra den løbende bogføring til selve påtegningen.
-      </p>
-      <div class="contact-card" style="margin-top: 3.5rem;">
-        <dl>
-          <div><dt>Kontakt</dt><dd><a class="link-plain" href={org.phoneHref}>Direkte {org.phone}</a> · <a class="link-plain" href={org.officePhoneHref}>Kontor {org.officePhone}</a> · <a class="link-plain" href={org.emailHref}>{org.email}</a></dd></div>
-          <div><dt>Kontor</dt><dd>{org.street}, {org.city} · CVR {org.cvr}</dd></div>
-          <div><dt>Åbent</dt><dd>{org.hours}. {org.phoneHours}.</dd></div>
-        </dl>
+      <div class="inner-grid">
+        <div>
+          <p class="prose">
+            Har du behov for — eller direkte krav om — revisionspåtegning af dit selskabs
+            regnskaber? Vi står for den løbende bogføring og administration, og påtegningen
+            klarer vi i samarbejde med en statsautoriseret revisor.
+          </p>
+          <p class="prose">
+            Elgård Regnskab samarbejder med statsautoriseret revisor
+            <a class="link-plain" href="http://rygecarlsen.dk/" target="_blank" rel="noopener">Claus Carlsen</a>.
+            Samarbejdet giver mulighed for, at vi kan sammensætte opgaver omkring bogføring,
+            administration og revision på den måde, der passer bedst til din virksomheds
+            behov — fra den løbende bogføring til selve påtegningen.
+          </p>
+        </div>
+        <div>
+          <div class="aside">
+            <div class="aside-card">
+              <h3>Revision hos os</h3>
+              <ul>
+                <li>Revisionspåtegning via statsautoriseret revisor Claus Carlsen</li>
+                <li>Løbende bogholderi og administration, klar til revision</li>
+                <li>Samlet løsning, der passer til din virksomhed</li>
+              </ul>
+            </div>
+            <div class="aside-card">
+              <h3>Kontakt</h3>
+              <dl>
+                <div><dt>Direkte</dt><dd><a class="link-plain" href={org.phoneHref}>{org.phone}</a></dd></div>
+                <div><dt>Kontor</dt><dd><a class="link-plain" href={org.officePhoneHref}>{org.officePhone}</a></dd></div>
+                <div><dt>Adresse</dt><dd>{org.street}, {org.city}</dd></div>
+                <div><dt>Åbent</dt><dd>{org.hours}</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
