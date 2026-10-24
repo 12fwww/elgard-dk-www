@@ -191,7 +191,7 @@ const total = (key: 'old' | 'new') => (price?.rows || []).reduce((a: number, r: 
                   <td><span class={c.status === 'current' ? 'good' : c.status === 'outdated' || c.status === 'closed' ? 'bad' : ''}>{t.st[c.status as keyof typeof t.st]}</span></td>
                   <td>
                     {c.vulns ? <span class={c.worst === 'critical' || c.worst === 'high' ? 'bad' : 'mid'}>{c.vulns}</span> : '0'}
-                    {c.top?.[0] && <small>{c.top[0].cve ? <a href={c.top[0].link}>{c.top[0].cve}</a> : c.top[0].title} ({c.top[0].severity})</small>}
+                    {c.top?.[0] && <small class="vuln-cve">{c.top[0].cve ? <a href={c.top[0].link}>{c.top[0].cve}</a> : c.top[0].title} ({c.top[0].severity})</small>}
                   </td>
                 </tr>
               ))}
@@ -295,11 +295,11 @@ const total = (key: 'old' | 'new') => (price?.rows || []).reduce((a: number, r: 
       </div>
     </section>
 
-    <section class="wrap split">
+    <section class={price ? "wrap split" : "wrap"}>
       {data.platform?.cms === 'WordPress' && (
         <div>
           <h2>{t.needsH}</h2>
-          <ul class="ticks">{t.needs.map((x) => <li><span class="mid">•</span> {x}</li>)}</ul>
+          <ul class="ticks">{t.needs.map((x: any) => <li><span class="mid">•</span> {x}</li>)}</ul>
         </div>
       )}
       {price && (
@@ -345,9 +345,11 @@ const total = (key: 'old' | 'new') => (price?.rows || []).reduce((a: number, r: 
   .arrow { color: var(--muted); font-size: 0.5em; }
   .good { color: var(--ok, #1f7a4a); } .mid { color: var(--mid, #9a6a00); } .bad { color: var(--risk, #b3261e); }
   td .good, td .mid, td .bad, .ticks .good, .ticks .mid, .ticks .bad { font-weight: 600; }
-  .table-scroll { overflow-x: auto; }
-  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
-  th, td { text-align: left; padding: 14px 16px 14px 0; vertical-align: top; }
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { width: 100%; min-width: 600px; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 14px 16px 14px 0; vertical-align: top; overflow-wrap: break-word; }
+  .vuln-cve { display: block; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .vuln-cve a { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: bottom; }
   thead th { font-weight: 600; color: var(--muted); padding-bottom: 8px; }
   tbody tr:nth-child(odd) { background: var(--surface); }
   tbody th { font-weight: 500; padding-left: 12px; }
@@ -360,7 +362,8 @@ const total = (key: 'old' | 'new') => (price?.rows || []).reduce((a: number, r: 
   .split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(32px, 6vw, 96px); align-items: start; }
   .panel { background: var(--surface); border-radius: var(--radius, 0); padding: clamp(24px, 4vw, 48px); }
   .ticks { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-  .ticks li { display: grid; grid-template-columns: max-content 1fr; gap: 12px; }
+  .ticks li { display: grid; grid-template-columns: max-content 1fr; gap: 12px; align-items: baseline; }
+  .ticks .bad, .ticks li { overflow-wrap: break-word; min-width: 0; }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; }
   .chips span { background: var(--surface); padding: 6px 12px; border-radius: 999px; }
   .note { color: var(--muted); font-size: var(--step-small, 0.9rem); }
@@ -375,5 +378,15 @@ const total = (key: 'old' | 'new') => (price?.rows || []).reduce((a: number, r: 
     .split, .shots__row { grid-template-columns: 1fr; }
     .shots__row--mobile { grid-template-columns: 1fr 1fr; }
     th, td { padding-right: 10px; }
+    table { min-width: 0; }
+    .table-scroll { overflow-x: visible; }
+    table, thead, tbody, tr, th, td { display: block; }
+    thead { display: none; }
+    tr { border: 1px solid var(--border, #e0e0e0); border-radius: 8px; margin-bottom: 16px; overflow: hidden; }
+    th, td { padding: 8px 12px; border-bottom: 1px solid var(--border, #f0f0f0); }
+    th[scope="row"] { background: var(--surface); font-weight: 600; }
+    td { display: flex; justify-content: space-between; gap: 8px; }
+    td::before { content: attr(data-label); font-weight: 600; color: var(--muted); flex-shrink: 0; }
+    .ticks .bad, small a { overflow-wrap: break-word; word-break: break-all; }
   }
 </style>
