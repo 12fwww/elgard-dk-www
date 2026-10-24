@@ -121,11 +121,3 @@ export const towns = [
   'Bagsværd',
   'Lillerød',
 ];
-
-export const foundCredit = {
-  title: 'Birkerød Hovedgade',
-  creator: 'Hubertus (assumed)',
-  license: 'CC BY-SA 2.5',
-  page: 'https://commons.wikimedia.org/w/index.php?curid=1965569',
-  via: 'Wikimedia Commons',
-};

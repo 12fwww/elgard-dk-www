@@ -9,10 +9,8 @@ import { services } from '../data/site.ts';
 import { branches } from '../data/site.ts';
 import { faq } from '../data/site.ts';
 import { pickerTasks } from '../data/site.ts';
-import { foundCredit } from '../data/site.ts';
 import liselotte from '../assets/original/liselotte.jpg';
 import logo from '../assets/original/logo.png';
-import birkerod from '../assets/original/birkerod.jpg';
 import annemette from '../assets/original/annemette.jpg';
 import liselottePortrait from '../assets/original/liselotte-portrait.jpg';
 const B = import.meta.env.BASE_URL;
@@ -71,8 +69,8 @@ const sumTotal = pickerTasks.reduce((s, t) => s + t.est, 0);
           </ul>
         </div>
         <figure class="hero-figure">
-          <Picture src={annemette} formats={['avif', 'webp']} widths={[340, 512, 722]} sizes="(min-width: 56em) 30rem, (min-width: 48em) 22rem, 88vw" alt="På kontoret hos Elgård Regnskab, RevisorHuset i Birkerød" loading="eager" />
-          <figcaption class="hero-credit">Kontoret i Birkerød</figcaption>
+          <Picture src={annemette} formats={['avif', 'webp']} widths={[340, 512, 722]} sizes="(min-width: 56em) 30rem, (min-width: 48em) 22rem, 88vw" alt="Annemette på kontoret hos Elgård Regnskab i Birkerød" loading="eager" />
+          <figcaption class="hero-credit">Annemette, på kontoret i Birkerød</figcaption>
         </figure>
       </div>
     </section>
@@ -137,12 +135,6 @@ const sumTotal = pickerTasks.reduce((s, t) => s + t.est, 0);
             ))}
           </ul>
         </div>
-        <figure class="street-figure" data-reveal>
-          <Picture src={birkerod} formats={['avif', 'webp']} widths={[480, 960, 1440, 1920]} sizes="(min-width: 48em) 39rem, 94vw" alt="Birkerød Hovedgade" loading="lazy" />
-          <figcaption>
-            Birkerød Hovedgade — {foundCredit.license}, via {foundCredit.via}.
-          </figcaption>
-        </figure>
       </div>
     </section>
 

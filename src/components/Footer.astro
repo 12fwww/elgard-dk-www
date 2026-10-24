@@ -2,7 +2,6 @@
 import { nav } from '../data/site.ts';
 import { org } from '../data/site.ts';
 import { towns } from '../data/site.ts';
-import { foundCredit } from '../data/site.ts';
 const B = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
@@ -34,10 +33,6 @@ const B = import.meta.env.BASE_URL.replace(/\/$/, "");
       <nav aria-label="Sidemeny">
         {nav.map((n) => <a href={n.href}>{n.label}</a>)}
       </nav>
-      <p>
-        Billedet: <a class="link-plain" href={foundCredit.page}>{foundCredit.title}</a> —
-        {foundCredit.license}, via {foundCredit.via}.
-      </p>
       <p>© {new Date().getFullYear()} {org.name}</p>
     </div>
   </div>

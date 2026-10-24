@@ -7,9 +7,7 @@ import SeoHead from '../../components/SeoHead.astro';
 import { org } from '../../data/site.ts';
 import { crumb } from '../../data/site.ts';
 import { branches } from '../../data/site.ts';
-import { foundCredit } from '../../data/site.ts';
 import annemette from '../../assets/original/annemette.jpg';
-import birkerod from '../../assets/original/birkerod.jpg';
 const B = import.meta.env.BASE_URL;
 const title = 'Om Elgård Regnskab — bogholderi og regnskab i Birkerød';
 const description = 'Regnskabs- og bogholderiservice for selvstændige i mange brancher. Kontor i RevisorHuset, Blokken 90, Birkerød — åbent man–tor 9–16, fre 9–15.';
@@ -51,18 +49,10 @@ const path = '/om-os/';
             virksomhed, er du velkommen til at ringe eller kigge forbi kontoret. Vi tager
             gerne en uforpligtende snak om, hvad vi kan hjælpe med.
           </p>
-          <div class="photo-row">
-            <figure>
-              <Picture src={annemette} formats={['avif', 'webp']} widths={[340, 512, 722]} sizes="(min-width: 48em) 240px, 40vw" alt="Annemette på kontoret i Elgård Regnskab" loading="lazy" />
-              <figcaption>På kontoret, Blokken 90 i Birkerød.</figcaption>
-            </figure>
-            <figure>
-              <Picture src={birkerod} formats={['avif', 'webp']} widths={[480, 960, 1440, 1920]} sizes="(min-width: 48em) 672px, 60vw" alt="Birkerød Hovedgade" loading="lazy" />
-              <figcaption>
-                Birkerød Hovedgade — {foundCredit.license}, via {foundCredit.via}.
-              </figcaption>
-            </figure>
-          </div>
+          <figure class="office-figure">
+            <Picture src={annemette} formats={['avif', 'webp']} widths={[340, 512, 722]} sizes="(min-width: 48em) 240px, 40vw" alt="Annemette på kontoret i Elgård Regnskab" loading="lazy" />
+            <figcaption>På kontoret, Blokken 90 i Birkerød.</figcaption>
+          </figure>
         </div>
         <div>
           <div class="aside">
